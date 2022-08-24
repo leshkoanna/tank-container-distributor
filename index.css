@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    width: 100%;
+    width: 100vw;
 
 }
 * {
@@ -28,7 +28,7 @@ body {
 
 }
 
-p, li, a {
+p, li, a, h2 {
     font-weight: 100;
     color: var(--offwhite);
 }
@@ -48,8 +48,8 @@ p, li, a {
 }
 
 .section1 img {
-    height: 12rem;
-    padding: 2rem 0 2rem 10rem;
+    max-height: 12rem;
+    padding: 2rem 0 2rem 20rem;
 }
 
 li, a {
@@ -61,8 +61,9 @@ li, a {
 
 #USwrapper {
     display: flex;
-    padding: 10rem 30rem 10rem 30rem;
+    padding: 10vh 20vw 10vh 20vw;
     background-color: var(--blue);
+    overflow: hidden;
 }
 
 #US {
@@ -96,19 +97,20 @@ li, a {
     padding: 1rem 3rem 1rem 3rem;
     border-radius: 5%;
     border: none;
-    color: var(--blue)
+    color: var(--blue);
+    cursor: pointer;
 }
 
 #USwrapper img {
-    height: 400px;
-    width: auto;
+    width: 40vw;
+    height: 27vw;
 }
 
 #TANKS {
     width: 100%;
-    height: 100vh;
-    background-color: var(--offwhite);
     text-align: center;
+    background-color: var(--offwhite);
+    padding: 10vh 0 10vh 0;
 }
 
 #gridwrapper {
@@ -121,21 +123,25 @@ li, a {
     color: var(--blue);
     font-size: 3rem;
     font-weight: bold;
-    padding: 4rem;
+    padding-bottom: 6rem;
+
 }
 
 
 #tankwrapper {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(4, 220px);
+    grid-template-rows: repeat(2, 220px);
+    grid-column-gap: 4rem;
     overflow: hidden;
 }
 
 .gridimg {
-    height: 1vh;
-    width: 1vw;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
+    border: 5px solid var(--brightgreen);
+    border-radius: 10%;
 }
 
 #1 {
@@ -156,4 +162,87 @@ li, a {
 #4 {
     grid-column: 4/5;
     grid-row: 1/2;
+}
+
+.gridp {
+    color: var(--blue);
+    font-size: 2rem;
+    padding: 2rem 0 0 0;
+}
+
+#Quote {
+    width: 100%;
+    background-color: var(--lightgreen);
+    padding: 20vh 20vw 20vh 20vw;
+    color: var(--blue);
+}
+
+q {
+    font-size: 3.6rem;
+    color: var(--blue);
+    line-height: 60px;
+}
+
+#Quote p {
+    font-weight: bold;
+    text-align: right;
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+#signwrapper {
+    width: 100%;
+    background-color: var(--offwhite);
+    padding: 10vh 10vw 10vh 10vw;
+
+}
+
+#sign {
+    width: 100%;
+    background-color: var(--deepgreen);
+    padding: 10vh 10vw 10vh 10vw;
+    border-radius: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+#h2pwrapper {
+    width: 40%;
+    height: auto;
+    border: 1px solid black;
+    text-align: left;
+
+}
+
+h2.wrappertext {
+    font-size: 3rem;
+}
+
+p.wrappertext {
+    font-size: 2rem;
+}
+
+#sign button {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--brightgreen);
+    padding: 1rem 3rem 1rem 3rem;
+    border-radius: 5%;
+    border: none;
+    color: var(--blue);
+    margin-left: 10rem;
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--blue);
+    width: 100vw;
+    height: 7vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 100;
+    color: var(--offwhite);
+    font-size: 1.5rem;
+    padding-right: 6rem;
 }
